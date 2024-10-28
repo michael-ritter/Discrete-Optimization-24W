@@ -1,0 +1,25 @@
+version = 1
+requires-python = ">=3.12"
+
+[[package]]
+name = "do-github"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "pyscipopt" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pyscipopt", specifier = ">=5.1.1" }]
+
+[[package]]
+name = "pyscipopt"
+version = "5.1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b5/2d/2e6d3c302c5be5d1573efdc4c1aab303ae23c52497da2681e2acea5d8f39/pyscipopt-5.1.1.tar.gz", hash = "sha256:7c7ebf2124b8cf0d35cd3fc65c255a226661dd360dd8bb6c24df2bef110f579c", size = 1101236 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3e/ec/1cca56cc4e2ea9b6fa7fb737ed4cf7ff3d459c787ec5b0c271c0956328d7/PySCIPOpt-5.1.1-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:a3aa6564e72f961695915dfd320f9a511d6293a3c5d4c11ef91f09d9d4e49848", size = 11209722 },
+    { url = "https://files.pythonhosted.org/packages/de/6d/ef1173c84c3cd5df67378383b6c087ebcaa6460e0e306855e5fd2cdd06f4/PySCIPOpt-5.1.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:7a42f1112fd438da9e6960717725bdd1142a8dcd1151a2891ee230253b516b32", size = 7710263 },
+    { url = "https://files.pythonhosted.org/packages/28/ed/3a6f784ac88c831e0835358e8fbce0fc5bf3cc6320b683f216d62fb3d48e/PySCIPOpt-5.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0335fae1e4f5005b248bedb390d9caef6a03e66c83df84505ab4e49b605de016", size = 14919908 },
+    { url = "https://files.pythonhosted.org/packages/5c/64/e2b57762a0e6ca654b29036714306438f7200c25e93ae6caaffe869214d4/PySCIPOpt-5.1.1-cp312-cp312-win_amd64.whl", hash = "sha256:c2dd9e613cce0f8d9fe941da101c91bdb534386dd15c322d87434be0fb90b94b", size = 56278329 },
+]
