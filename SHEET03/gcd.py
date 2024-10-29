@@ -6,8 +6,10 @@ b = 2
 # create the SCIP model
 model = scip.Model("Greatest Common Divisor")
 
-# add variables x and y of type 'integer' with no upper and lower bound
-# use model.addVar( ... )
+# add variables x and y of type 'integer' ('I') with no upper and lower bound
+# variables types can be 'C' (continuous), 'I' (integer) or 'B' (binary)
+x = model.addVar(vtype="I", lb=None, ub=None, name="x") # without lb=None a lower bound of 0 is implicitly assumed
+# use y = model.addVar( ... )
 
 # add constraint
 # use model.addCons( ... )
