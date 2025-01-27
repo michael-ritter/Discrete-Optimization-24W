@@ -1,7 +1,6 @@
 from itertools import pairwise
 import pyscipopt as scip
 import networkx as nx
-import numpy as np
 import matplotlib.pyplot as plt
 import tsplib95
 
