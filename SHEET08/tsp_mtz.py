@@ -6,11 +6,11 @@ import tsplib95
 
 # load TSP instance
 problem = tsplib95.load(
-    "/Users/ritter/Documents/TEACHING/COURSES/DO-GitHub/SHEET08/tsp-problems/ulysses16.tsp"
+    "SHEET08/tsp-problems/ulysses16.tsp"
 )
 
 
-def tsp_solve(problem: tsplib95.models.Problem) -> (float,list):
+def tsp_solve(problem: tsplib95.models.Problem) -> tuple[float,list]: #objective, list of nodes in order
     # create the SCIP model
     model = scip.Model("TSP: Miller, Tucker, Zemlin")
     graph = problem.get_graph()
@@ -94,24 +94,3 @@ if problem.is_depictable():
     figure.savefig("tsp_solution.png")
 else:
     print(f"Problem instance '{problem.name}' is not depictable.")
-
-    # n = nv(tsp_graph)
-    # first_node = 1
-
-    # @objective(model, Min, sum(x[i,j] * tsp.weights[i,j] for i=1:n, j=1:n if has_edge(tsp_graph,i,j)))
-
-    # optimize!(model)
-
-    # if termination_status(model) == MOI.OPTIMAL  # if model was solved to optimality
-    #     # compare optimal objective value with TSPLIB benchmark
-    #     println("Optimal solution with objective value $(objective_value(model)) found (should be $(tsp.optimal)).")
-    #     tsp_solution = [
-    #         (i,j) for i=1:n, j=1:n
-    #         if has_edge(tsp_graph, i,j) && value(x[i,j]) ≈ 1  # short for: isapprox(value(x[i,j]), 1)
-    #     ]
-    # else  # no solution
-    #     println(raw_status(model))
-    #     tsp_solution = []
-#     # end
-#     return tsp_solution
-# end
